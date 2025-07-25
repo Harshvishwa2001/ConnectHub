@@ -25,13 +25,13 @@ import { NextRequest, NextResponse } from "next/server";
 // POST /api/posts/:postId/dislike
 export const POST = async (
   req: NextRequest,
-  { params }: { params: { postId: string } }
+  { params }: { params: { postid: string } }
 ) => {
   try {
     await connectDB();
     
     const userId = await req.json();
-    const post = await Post.findById({ _id: params.postId });
+    const post = await Post.findById({ _id: params.postid });
 
     if (!post) {
       return NextResponse.json({ error: "Post not found." }, { status: 404 });

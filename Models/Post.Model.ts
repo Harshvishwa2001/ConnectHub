@@ -44,10 +44,11 @@ const postSchema = new mongoose.Schema<IPostDocument>({
     likes: {
         type: [String],
     },
-    comments: {
+    comments: [{
         // type: [String],
         type: mongoose.Schema.Types.ObjectId,
-        }
+        ref: "Comment",
+        }]
 
 }, {
     timestamps: true,

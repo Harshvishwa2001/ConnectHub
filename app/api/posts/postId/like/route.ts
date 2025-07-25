@@ -15,6 +15,8 @@
 // }
 // // post likes
 // export const POST = async (req:NextRequest, {params}:{params:{postId:string}}) => {
+//   console.log(params.postId);
+//   console.log(typeof params.postId);
 //     try {
 //         await connectDB();
 //         const userId = await req.json();
