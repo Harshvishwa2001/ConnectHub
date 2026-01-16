@@ -2,6 +2,7 @@ import Feed from "@/Component/Feed";
 import News from "@/Component/News";
 import Slidebar from "@/Component/Slidebar";
 import { currentUser } from "@clerk/nextjs/server";
+export const dynamic = 'force-dynamic';
 
 export default async function Home() {
   const user = await currentUser(); 

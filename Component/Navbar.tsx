@@ -31,9 +31,11 @@ const Navbar = () => {
                             <UserButton />
                         </SignedIn>
                         <SignedOut>
-                            <Button className="rounded-full cursor-pointer bg-blue-700 text-white hover:bg-blue-500 px-4 py-1">
-                                <SignInButton />
-                            </Button>
+                            <SignInButton mode="modal">
+                                <button className="rounded-full cursor-pointer bg-blue-700 text-white hover:bg-blue-500 px-4 py-1">
+                                    Sign In
+                                </button>
+                            </SignInButton>
                         </SignedOut>
                     </div>
                 </div>
